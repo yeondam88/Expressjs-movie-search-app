@@ -1,5 +1,15 @@
-<h1>Result page!</h1>
-
-<% data["Search"].forEach(function(movie){ %>
-  <li><%= movie["Title"] %></li>
-<% }) %>
+<% include partials/header %> 
+<div class="container-result">
+  <div class="container-result-inner">
+    <h1>Search Result</h1>
+    <ul>
+      <% data["Search"].forEach(function(movie){ %>
+      <li>
+        <%= movie["Title"] %> - <%= movie["Year"] %>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/"><div class="button btn red">Go back <i class="ion-ios-home"></i></div></a>
+  </div>  
+</div>
+<% include partials/footer %>

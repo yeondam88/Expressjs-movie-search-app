@@ -1,5 +1,13 @@
-<h1>Search For a Movie!</h1>
-<form action="/results" method="GET">
-  <input type="text" name="search" placeholder="Search term here!" />
-  <input type="submit">
-</form>
+<% include partials/header %>
+
+<div class="container">
+	<form action="/results" autocomplete="off" method="GET" class="container-innr">
+	  <label class="search" for="inpt_search">
+			<input id="inpt_search" type="text" name="search"/>
+		</label>
+		<p class="title">Search your favorite Movie</p>
+    <p class="info">Made with<i class="icon ion-ios-heart"></i> by Yeondam Park</p>
+	</form>
+</div>
+
+<% include partials/footer %>
